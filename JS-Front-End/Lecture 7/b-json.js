@@ -18,3 +18,7 @@ console.log(typeof catJSON);
 let convertedCat = JSON.parse(catJSON);
 console.log(convertedCat);
 console.log(convertedCat.breed);
+
+// Add indentation to json
+let catJsonWithIndentation = JSON.stringify(cat, null, 2);
+console.log(catJsonWithIndentation);
