@@ -25,5 +25,7 @@
         "Tedy",
         "Vancho"
     ],
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "git.countBadge": "off",
+    "git.untrackedChanges": "mixed"
 }
