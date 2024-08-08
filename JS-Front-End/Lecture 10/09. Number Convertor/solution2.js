@@ -4,28 +4,28 @@ function solve() {
     // const selectMenuFromElement = document.getElementById('selectMenuFrom');
     const selectMenuToElement = document.getElementById('selectMenuTo');
     const convertButtonElement = document.querySelector('button');
-    
+
     // Populate select menu to with options
     const binaryOptionElement = selectMenuToElement.querySelector('option');
     binaryOptionElement.value = 'binary';
     binaryOptionElement.textContent = 'Binary';
-    
-    const hexadecimalOptionElement = document.createElement('option');
-    hexadecimalOptionElement.value = 'hexadecimal';
-    hexadecimalOptionElement.textContent = 'Hexadecimal';
-    selectMenuToElement.appendChild(hexadecimalOptionElement);
-    
+
+    const hexadecimlOptionElement = document.createElement('option');
+    hexadecimlOptionElement.value = 'hexadecimal';
+    hexadecimlOptionElement.textContent = 'Hexadecimal';
+    selectMenuToElement.appendChild(hexadecimlOptionElement);
+
     const convertors = {
         binary: convertDecimalToBinary,
-        hexadecimal: convertDecimalToHexadecimal,
+        hexadecimal: convertDecimalToHex,
     };
-    
+
     convertButtonElement.addEventListener('click', () => {
         const numberValue = Number(inputNumberElement.value);
 
-        resultElement.value = convertors[selectMenuToElement.value](numberValue);
+        resultElement.value = convertors[selectMenuToElement.value](numberValue)
     });
-    
+
     // Just use toString(2)
     function convertDecimalToBinary(number) {
         const result = [];
@@ -36,10 +36,9 @@ function solve() {
 
         return result.reverse().join('');
     }
-
     
     // Just use toString(16)
-    function convertDecimalToHexadecimal(number = 10) {
+    function convertDecimalToHex(number = 10) {
         const digitMapping = new Map([
             [0, '0'],
             [1, '1'],

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <h1>Event Handling</h1>
+    
+    <ol>
+        <li>
+            <span>Add event handler with HTML Attributes</span>
+            <button onclick='htmlAttributesEventHandler(event)'>Click ME!</button>
+        </li>
+        <li>
+            <span>Add event handler using DOM element properties</span>
+            <button id = "second-button">Click ME!</button>
+        </li>
+        <li>
+            <span>Add event handler using DOM event handler</span>
+            <button id = "third-button">Click ME!</button>
+        </li>
+    </ol>
+    
+    <script>
+        // Add event handler with HTML Attributes
+        function htmlAttributesEventHandler() {
+            console.log('Add event handler with HTML Attributes');
+        }
+        
+        // Add event handler using DOM element properties
+        const secondButton = document.getElementById('second-button');
+        secondButton.onclick = function(event) {
+            console.log('Add event handler using DOM element properties');
+        }
+        
+        //Add event handler using DOM event handler - preferred method
+        const thirdButton = document.getElementById('third-button');
+        thirdButton.addEventListener('click', (event) => {
+            console.log('Add event handler using DOM event handler');
+        });
+        
+        // Add second event handler to thirdButton element
+        function secondEventHandler() {
+            console.log('Second event handler');
+        }
+
+        thirdButton.addEventListener('click', secondEventHandler);
+
+        // Remove the second event handler after 10 seconds
+        setTimeout(() => {
+            thirdButton.removeEventListener("click", secondEventHandler);
+            console.log('removed second event handler');
+        }, 10000);
+
+    </script>
+    
+</body>
+</html>

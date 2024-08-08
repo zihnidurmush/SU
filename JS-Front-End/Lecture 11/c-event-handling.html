@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    
+    <h1>Event Handling</h1>
+    
+    <div id="count">0</div>
+    
+    <button id="increase-button">+</button>
+    <button id="increase-button-by-10">+10</button>
+    
+    <script>
+        const countElement = document.getElementById('count');        
+        const increaseButton = document.getElementById('increase-button');
+        const countElementBy10 = document.getElementById('count');       
+        const increaseButtonBy10 = document.getElementById('increase-button-by-10');
+        
+        if (increaseButton) {
+            increaseButton.addEventListener("click", () => {
+                countElement.textContent = Number(countElement.textContent) + 1;
+            });
+        } else  {
+            increaseButtonBy10.addEventListener("click", () => {
+                countElementBy10.textContent = Number(countElementBy10.textContent) + 10;
+            });
+        } 
+    </script>
+    
+</body>
+</html>
