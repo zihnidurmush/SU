@@ -12,24 +12,28 @@
     <div id="count">0</div>
     
     <button id="increase-button">+</button>
+    <button id="decrease-button">-</button>
     <button id="increase-button-by-10">+10</button>
     
     <script>
         const countElement = document.getElementById('count');        
         const increaseButton = document.getElementById('increase-button');
-        const countElementBy10 = document.getElementById('count');       
-        const increaseButtonBy10 = document.getElementById('increase-button-by-10');
-        
-        if (increaseButton) {
-            increaseButton.addEventListener("click", () => {
-                countElement.textContent = Number(countElement.textContent) + 1;
-            });
-        } else  {
-            increaseButtonBy10.addEventListener("click", () => {
-                countElementBy10.textContent = Number(countElementBy10.textContent) + 10;
-            });
-        } 
+        const decreaseButton = document.getElementById('decrease-button');
+        const increaseButtonByTen = document.getElementById('increase-button-by-10');
+
+
+        increaseButton.addEventListener("click", () => {
+            countElement.textContent = Number(countElement.textContent) + 1;
+        });
+        decreaseButton.addEventListener("click", () => {
+            countElement.textContent = Number(countElement.textContent) - 1;
+        });
+        increaseButtonByTen.addEventListener("click", () => {
+            countElement.textContent = Number(countElement.textContent) + 10;
+        });
+
     </script>
+        
     
 </body>
 </html>
