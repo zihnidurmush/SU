@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAPI</title>
+</head>
+<body>
+    <script>
+        // Fetch with async function
+        async function getSwCharacters(params) {
+            const url = 'https://swapi.dev/api/people';
+            
+            try {
+                const response = await fetch(url);
+                const result = await response.json();
+                
+                console.log(result);
+            } catch (error) {
+                console.log(error.message);
+                
+            }
+            
+            
+        }
+        
+        getSwCharacters();
+    </script>
+    
+</body>
+</html>
