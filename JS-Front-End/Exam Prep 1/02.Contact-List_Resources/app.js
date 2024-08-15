@@ -12,7 +12,7 @@ function solve() {
     const addButtonElement= document.getElementById('add-btn');
     
     // get ul list element
-    const checklist = document.getElementById('check-list');
+    const adoptionInfo = document.getElementById('adoption-info');
     
     // Attach add event
     addButtonElement.addEventListener('click', () => {
