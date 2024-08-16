@@ -87,6 +87,15 @@ function adventure(input) {
 	});
 }
 
+adventure(["2",
+   "Gus 100 0",
+   "Walt 100 6",
+   "FireShot - Gus - Bandit",
+   "TakeHit - Gus - 100 - Bandit",
+   "Reload - Walt",
+   "Ride Off Into Sunset"]
+);
+
 // const hp = Number(hpInput);
 // const bullets = Number(bulletsInput);
 
